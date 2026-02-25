@@ -1,0 +1,25 @@
+---
+- name: IR-DA-03 | Base hardening and usability
+  hosts:
+    - hosts
+    - routers
+  become: true
+  gather_facts: true
+  roles:
+    - disable-qxl
+    - hosts_setup
+
+- name: IR-DA-03 | Create training user account (self-contained)
+  hosts:
+    - grp-analyst
+  become: true
+  gather_facts: false
+  roles:
+    - local_user_access
+
+- name: IR-DA-03 | Analyst workstation (case pack)
+  hosts: grp-analyst
+  become: true
+  gather_facts: true
+  roles:
+    - analyst_setup

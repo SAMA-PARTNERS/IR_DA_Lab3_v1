@@ -1,0 +1,8 @@
+---
+- name: Ensure hostname resolution for lab nodes (corp-net)
+  ansible.builtin.blockinfile:
+    path: /etc/hosts
+    marker: "# {mark} IR-DA-03 HOSTS"
+    block: |
+      10.10.60.1  r1
+      10.10.60.10 analyst

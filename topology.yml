@@ -1,0 +1,29 @@
+name: ir-da-03-offline-artifacts
+hosts:
+  - name: analyst
+    base_box:
+      image: kali
+      mgmt_user: debian
+    flavor: m1.small
+routers:
+  - name: r1
+    base_box:
+      image: debian-12-x86_64
+      mgmt_user: debian
+    flavor: m1.tiny
+networks:
+  - name: corp-net
+    cidr: 10.10.60.0/24
+    accessible_by_user: true
+net_mappings:
+  - host: analyst
+    network: corp-net
+    ip: 10.10.60.10
+router_mappings:
+  - router: r1
+    network: corp-net
+    ip: 10.10.60.1
+groups:
+  - name: grp-analyst
+    nodes:
+      - analyst

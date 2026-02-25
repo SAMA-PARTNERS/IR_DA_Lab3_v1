@@ -1,0 +1,13 @@
+Case pack notes
+
+- These artifacts were exported from srv01 after the incident.
+- Timestamps are in the server's local time (no year in syslog/auth format).
+- Treat the evidence files as "copies" of what was found on disk.
+
+Start with:
+  auth.log
+  syslog
+
+Then confirm the post-auth steps using:
+  bash_history
+  evidence/

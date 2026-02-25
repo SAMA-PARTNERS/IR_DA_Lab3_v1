@@ -1,0 +1,5 @@
+---
+# Local fallback role (no-op)
+- name: disable-qxl | no-op
+  ansible.builtin.debug:
+    msg: "disable-qxl role not required for this lab"

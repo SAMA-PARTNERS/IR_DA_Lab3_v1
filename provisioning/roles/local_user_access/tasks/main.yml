@@ -1,0 +1,35 @@
+---
+# Creates the training user account used by ORYXYBER labs.
+
+- name: Ensure training user exists (user)
+  ansible.builtin.user:
+    name: user
+    comment: ORYXYBER Training User
+    shell: /bin/bash
+    create_home: true
+    groups: sudo
+    append: true
+    password: "{{ 'Password123' | password_hash('sha512') }}"
+
+- name: Ensure password does not expire (lab UX)
+  ansible.builtin.command: chage -M 99999 -m 0 -E -1 user
+  changed_when: false
+  failed_when: false
+
+- name: Ensure SSH password auth is enabled (so web console / SSH works)
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#?PasswordAuthentication\s+'
+    line: 'PasswordAuthentication yes'
+
+- name: Ensure SSH keyboard-interactive auth is enabled (some images require this)
+  ansible.builtin.lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#?KbdInteractiveAuthentication\s+'
+    line: 'KbdInteractiveAuthentication yes'
+
+- name: Restart SSH service
+  ansible.builtin.service:
+    name: ssh
+    state: restarted
+  failed_when: false

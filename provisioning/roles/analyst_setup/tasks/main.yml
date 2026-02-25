@@ -1,0 +1,34 @@
+---
+- name: Create ORYXYBER lab directory
+  ansible.builtin.file:
+    path: /home/user/oryxyber/IR-DA-03
+    state: directory
+    owner: user
+    group: user
+    mode: "0755"
+
+- name: Copy START_HERE.md
+  ansible.builtin.copy:
+    src: START_HERE.md
+    dest: /home/user/oryxyber/IR-DA-03/START_HERE.md
+    owner: user
+    group: user
+    mode: "0644"
+
+- name: Copy case pack
+  ansible.builtin.copy:
+    src: case_pack/
+    dest: /home/user/oryxyber/IR-DA-03/case_pack/
+    owner: user
+    group: user
+    mode: "0644"
+    directory_mode: "0755"
+
+- name: Ensure evidence scripts are executable (for hashing/inspection convenience)
+  ansible.builtin.file:
+    path: "{{ item }}"
+    mode: "0755"
+  loop:
+    - /home/user/oryxyber/IR-DA-03/case_pack/evidence/payload_.upd
+    - /home/user/oryxyber/IR-DA-03/case_pack/evidence/update.sh
+  failed_when: false

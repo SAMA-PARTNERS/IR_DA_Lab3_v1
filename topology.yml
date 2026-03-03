@@ -10,7 +10,7 @@ routers:
     base_box:
       image: debian-12-x86_64
       mgmt_user: debian
-    flavor: m1.tiny
+    flavor: m1.small
 networks:
   - name: corp-net
     cidr: 10.10.60.0/24
